@@ -1,15 +1,557 @@
-/* just a sample css rule to show that everything works */
-footer p
-{
-  font-size: small;
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+html {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
-header{
-  text-align: center;
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: Ubuntu sans-serif;
+    background-color: background: #f7f7f7;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
-header img{
-  max-width: 100%;
-	height: auto;
+/* jssor slider loading skin spin css */
+.jssorl-009-spin img {
+    animation-name: jssorl-009-spin;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes jssorl-009-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.jssorb064 {position:absolute;}
+.jssorb064 .i {position:absolute;cursor:pointer;}
+.jssorb064 .i .b {fill:#000;fill-opacity:.5;stroke:#fff;stroke-width:400;stroke-miterlimit:10;stroke-opacity:0.5;}
+.jssorb064 .i:hover .b {fill-opacity:.8;}
+.jssorb064 .iav .b {fill:#ffe200;fill-opacity:1;stroke:#ffaa00;stroke-opacity:.7;stroke-width:2000;}
+.jssorb064 .iav:hover .b {fill-opacity:.6;}
+.jssorb064 .i.idn {opacity:.3;}
+
+.jssora051 {display:block;position:absolute;cursor:pointer;}
+.jssora051 .a {fill:none;stroke:#fff;stroke-width:360;stroke-miterlimit:10;}
+.jssora051:hover {opacity:.8;}
+.jssora051.jssora051dn {opacity:.5;}
+.jssora051.jssora051ds {opacity:.3;pointer-events:none;}
+
+
+/**************PAGE 1***************/
+#bulleAcc {
+    z-index:3;
+    position: relative;
+    top: 40px;
+    left: 48%;
+    width: 40%;
+}
+
+#textAcc {
+    position: relative;
+    z-index:4;
+    bottom: 400px;
+    left: 15%;
+    font-size: 90%;
+
+}
+
+#page3{
+    position: relative;
+    font-size: 80%;
+}
+
+
+.boutonDemarrer{
+    margin: 30px 0px 0px 150px;
+    transition: transform .2s;
+}
+
+.boutonDemarrer:hover {
+    transform: scale(1.3);
+}
+
+#h2Acc{
+    margin: 30px 0px 0px 0px;
+    font-family: Ubuntu;
+}
+
+
+h1 { font-family: Ubuntu; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } h3 { font-family: Ubuntu; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: Ubuntu; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: Ubuntu; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: Ubuntu; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; }
+
+
+/*******************OLD CSS********************/
+
+.section{
+    margin:0px;
+    bottom:0px;
+    width:1920px;
+    float:left;
+    height:100%;
+    text-shadow:1px 1px 2px #f0f0f0;
+    background-color: #f7f7f7;
+}
+
+.col-6 {
+    max-width: 100% !important;
+}
+.section p{
+    margin:20px 0px 0px 50px;
+    width:600px;
+}
+.black{
+    color:#fff;
+
+    background:#000 url(../images/black.jpg) no-repeat top right;
+}
+.white{
+    color:#000;
+    background:#fff url(../images/white.jpg) no-repeat top right;
+}
+
+.section ul{
+    list-style:none;
+    margin:20px 0px 0px 550px;
+}
+.black ul li{
+    float:left;
+    padding:5px;
+    margin:5px;
+    color:#aaa;
+}
+.black ul li a{
+    display:block;
+    color:#f0f0f0;
+}
+.black ul li a:hover{
+    text-decoration:none;
+    color:#fff;
+}
+.white ul li{
+    float:left;
+    padding:5px;
+    margin:5px;
+    color:#aaa;
+}
+.white ul li a{
+    display:block;
+    color:#222;
+}
+.white ul li a:hover{
+    text-decoration:none;
+    color:#000;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    display: flex;
+    margin:0 auto;
+    justify-content: center;
+}
+.container nav {
+    position: fixed;
+    bottom: 30px;
+    width: 200px;
+    margin: 0 auto auto;
+    display: flex;
+    justify-content: space-between;
+}
+.container nav a {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
+.container nav a i {
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    margin-bottom: 20px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity .3s ease-out, bottom .5s ease;
+}
+.container nav a:hover > i {
+    opacity: 1;
+    bottom: 100%;
+}
+.container nav a.active > i {
+    color: #0288D1;
+    opacity: 1;
+    bottom: 100%;
+}
+.container nav a span {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    width: 20px;
+    margin-top: 20px;
+    opacity: 0;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    transition: opacity .3s ease-out, bottom .5s ease;
+}
+.container nav a:hover > span {
+    opacity: 1;
+    top: 100%;
+}
+.container nav a.active > span {
+    color: #000000;
+    opacity: 1;
+    top: 100%;
+}
+.container nav a:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 60px;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.container nav a:before {
+    content: '';
+    z-index: 99;
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    margin: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 0 0 1px #000;
+    background: #000;
+    transition: box-shadow 0.3s cubic-bezier(0.75, 0, 0.24, 1);
+}
+.container nav a:not(.active):hover:before {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 0 0 5px #000000;
+}
+.container nav a.active:before {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 0 4px #f7ce08;
+    background: #fff;
+}
+.container nav a:first-child.active ~ .line {
+    width: 0;
+}
+.container nav a:nth-child(2).active ~ .line {
+    width: 14%;
+}
+.container nav a:nth-child(3).active ~ .line {
+    width: 28%;
+}
+.container nav a:nth-child(4).active ~ .line {
+    width: 42%;
+}
+.container nav a:nth-child(5).active ~ .line {
+    width: 56%;
+}
+.container nav a:nth-child(6).active ~ .line {
+    width: 70%;
+}
+.container nav a:nth-child(7).active ~ .line {
+    width: 84%;
+}
+.container nav a:nth-child(8).active ~ .line {
+    width: 100%;
+}
+.container nav .line {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    z-index: -1;
+    width: 0;
+    height: 0px;
+    background: #000000;
+    transition: width 0.5s cubic-bezier(1, 0, 0.5, 1.01);
+}
+
+.text-center {
+    position:relative;
+    top:8%;
+    left:25%;
+}
+
+.text-center-under {
+    position:relative;
+    top:5%;
+    left:32%;
+}
+
+div#francemap {
+    width: 500px;
+    height: 300px;
+    margin-top: 20px;
+    z-index: 1000;
+    top: 150px;
+    left: 80px;
+}
+
+div#francemap2 {
+    width: 500px;
+    height: 300px;
+    margin-top: 20px;
+    z-index: 1000;
+    top: 150px;
+    left: 80px;
+}
+
+div#francemap3{
+    width: 500px;
+    height: 300px;
+    margin-top: 20px;
+    z-index: 1000;
+    top: 150px;
+    left: 80px;
+}
+
+div#francemap{
+    width: 500px;
+    height: 300px;
+    margin-top: 20px;
+    z-index: 1000;
+    top: 150px;
+    left: 80px;
+}
+
+div#section2 {
+    display: inline-block;
+}
+
+.sec2Text1 {
+    padding-top: 200px;
+    margin-left: 35px;
+    text-align: center;
+}
+
+.sec2Text2 {
+    text-align: center;
+
+}
+
+#bubble{
+    z-index: 1000;
+    position: relative;
+    right:-30px;
+    background-color:white;
+    text-align:center;
+    width:100%;
+    margin-top: 200px;
+    height:130px;
+    border:2px solid #555555;
+    border-top-right-radius:80px;
+    border-top-left-radius:80px;
+    border-bottom-right-radius:80px;
+    border-bottom-left-radius:80px;
+    /* implémentation Firefox */
+    -moz-border-radius-topright:80px 40px;
+    -moz-border-radius-topleft:80px 40px;
+    -moz-border-radius-bottomright:80px 40px;
+    -moz-border-radius-bottomleft:80px 40px;
+    /* implémentation Chrome, Safari, ... */
+    -webkit-border-top-right-radius:20px 20px;
+    -webkit-border-top-left-radius:20px 20px;
+    -webkit-border-bottom-right-radius:20px 20px;
+    -webkit-border-bottom-left-radius:20px 20px;
+
+}
+
+
+#bubble2{
+    z-index: 1000;
+    position: relative;
+    right:-30px;
+    background-color:white;
+    text-align:center;
+    width:100%;
+    margin-top: 450px;
+    margin-left: 80px;
+    height:130px;
+    border:2px solid #555555;
+    border-top-right-radius:80px;
+    border-top-left-radius:80px;
+    border-bottom-right-radius:80px;
+    border-bottom-left-radius:80px;
+    /* implémentation Firefox */
+    -moz-border-radius-topright:80px 40px;
+    -moz-border-radius-topleft:80px 40px;
+    -moz-border-radius-bottomright:80px 40px;
+    -moz-border-radius-bottomleft:80px 40px;
+    /* implémentation Chrome, Safari, ... */
+    -webkit-border-top-right-radius:20px 20px;
+    -webkit-border-top-left-radius:20px 20px;
+    -webkit-border-bottom-right-radius:20px 20px;
+    -webkit-border-bottom-left-radius:20px 20px;
+
+}
+
+#arrow_border{
+    width:0;
+    height:0;
+    line-height:0;
+    border-bottom:30px solid transparent;
+    border-left:30px solid transparent;
+    border-right:30px solid #555555; /* couleur de la bordure de la bulle */
+    position:absolute;
+    bottom:-30px;
+    right:65px;
+}
+#arrow_inner{
+    width:0;
+    height:0;
+    line-height:0;
+    border-bottom:30px solid transparent;
+    border-left:30px solid transparent;
+    border-right:30px solid white; /* couleur du fond de la bulle */
+    position:absolute;
+    bottom:-25px;
+    right:67px;
+}
+
+#text{
+    font-weight:bold;
+    font-size:15px;
+
+    position:relative;
+    top:10px;
+}
+
+#left{
+    float:left;
+    height: 100vh;
+    overflow:hidden;
+}
+#right{
+    float:left;
+    height: 100vh;
+    overflow:hidden;
+}
+
+/*FACTORY LOADING CSS*/
+
+.loadgo-overlay {
+    opacity: 1 !important;
+    background: transparent ! important;
+    justify-content: center !important;
+    background-size: 500px 800px !important;
+    background-image: url("https://scontent-cdt1-1.xx.fbcdn.net/v/t1.15752-9/50875301_402700270297028_7810520494473478144_n.png?_nc_cat=103&_nc_ht=scontent-cdt1-1.xx&oh=f1eb6e5937f557b75b078aeb672236e3&oe=5CFD2572") !important;
+}
+
+.imgcontainer {
+    margin-top: 200px;
+    margin-left: 450px;
+}
+
+#logo {
+    height: 800px;
+    width: 500px;
+    vertical-align: middle;
+    justify-content: center;
+}
+
+.cloud {
+    background-image: url("https://scontent-cdt1-1.xx.fbcdn.net/v/t1.15752-9/51124261_2013097502142264_7733117551642673152_n.png?_nc_cat=107&_nc_ht=scontent-cdt1-1.xx&oh=ff9a6d06333640768194bb4442ed75b7&oe=5CF61F58");
+    background-position: 75%;
+    justify-content: center;
+    vertical-align: middle !important;
+    display: table-cell;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    width: 383px;
+    height: 164px;
+    font-size: 14px;
+    text-align: center;
+    position: relative;
+    bottom: 20%;
+}
+
+.n{
+    font-size: 24px;
+    padding-left: 50px;
+    max-height: 30%;
+}
+
+.bubble5 {
+    margin-top: 50px;
+    background-color: #f7f7f7;
+}
+
+#section5 h2 {
+    margin-top: 50px;
+}
+
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 700px;
+    background-color: yellow;
+    color: #000;
+    text-align: left;
+    border-radius: 6px;
+    padding: 15px 10px;
+    margin:-600px 0px 0px 600px;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1000;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+
+.conclu{
+    margin: 170px 0px 0px 150px;
+}
+
+.conclu b{
+    margin: 0;
+}
+
+div#text6 {
+    margin-top: 60px;
+    margin-left: 80px;
+}
+
+div#text7 {
+    margin-top: 100px;
+    margin-left: 80px;
+}
+
+div#text7 img {
+    height: 600px;
+    margin-top: 100px;
 }
