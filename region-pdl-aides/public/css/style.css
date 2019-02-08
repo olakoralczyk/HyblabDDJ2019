@@ -14,7 +14,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Ubuntu sans-serif;
-    background-color: background: #f7f7f7;
+    background-color: #f7f7f7;
     top: 0;
     left: 0;
     width: 100%;
@@ -64,9 +64,16 @@ body {
     width: 40%;
 }
 
+#bulleAcc2 {
+    z-index:4;
+    position: relative;
+    top: 40px;
+    left: 48%;
+    width: 40%;
+}
 #textAcc {
     position: relative;
-    z-index:4;
+    z-index:6;
     bottom: 400px;
     left: 15%;
     font-size: 90%;
@@ -94,7 +101,7 @@ body {
 }
 
 
-h1 { font-family: Ubuntu; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } h3 { font-family: Ubuntu; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: Ubuntu; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: Ubuntu; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: Ubuntu; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; }
+h1 { font-family: Ubuntu sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } h3 { font-family: Ubuntu sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: Ubuntu; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: Ubuntu sans-serif; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: Ubuntu sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; }
 
 
 /*******************OLD CSS********************/
@@ -448,17 +455,27 @@ div#section2 {
     top:10px;
 }
 
-#left{
-    float:left;
+.left{
+    float: left;
     height: 100vh;
-    overflow:hidden;
+    overflow: hidden;
+    margin-left: 15em;
+    padding-right: 45em;
 }
-#right{
-    float:left;
+.right{
+    float: left;
     height: 100vh;
-    overflow:hidden;
+    width: 100vw;
+    overflow: hidden;
 }
 
+.factory {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    margin-left: 70em;
+    margin-top: -1.3em;
+}
 /*FACTORY LOADING CSS*/
 
 .loadgo-overlay {
@@ -469,39 +486,113 @@ div#section2 {
     background-image: url("https://scontent-cdt1-1.xx.fbcdn.net/v/t1.15752-9/50875301_402700270297028_7810520494473478144_n.png?_nc_cat=103&_nc_ht=scontent-cdt1-1.xx&oh=f1eb6e5937f557b75b078aeb672236e3&oe=5CFD2572") !important;
 }
 
-.imgcontainer {
-    margin-top: 200px;
-    margin-left: 450px;
-}
+
 
 #logo {
-    height: 800px;
-    width: 500px;
+    height: 550px;
     vertical-align: middle;
     justify-content: center;
 }
 
 .cloud {
     background-image: url("https://scontent-cdt1-1.xx.fbcdn.net/v/t1.15752-9/51124261_2013097502142264_7733117551642673152_n.png?_nc_cat=107&_nc_ht=scontent-cdt1-1.xx&oh=ff9a6d06333640768194bb4442ed75b7&oe=5CF61F58");
-    background-position: 75%;
     justify-content: center;
     vertical-align: middle !important;
-    display: table-cell;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 20px;
-    width: 383px;
-    height: 164px;
+    padding-left: 40px;
+    padding-right: 30px;
+    padding-top: 28px;
+    width: 370px;
+    height: 150px;
+    left: 44em;
+    top: 31em;
     font-size: 14px;
     text-align: center;
     position: relative;
-    bottom: 20%;
 }
 
+.cloud2 {
+    background-image: url("https://scontent-cdt1-1.xx.fbcdn.net/v/t1.15752-9/51124261_2013097502142264_7733117551642673152_n.png?_nc_cat=107&_nc_ht=scontent-cdt1-1.xx&oh=ff9a6d06333640768194bb4442ed75b7&oe=5CF61F58");
+    -webkit-transform: scale(-1, -1);
+    transform: scale(-1, -1);
+    justify-content: center;
+    vertical-align: middle !important;
+    padding-left: 40px;
+    padding-right: 30px;
+    padding-top: 28px;
+    width: 370px;
+    height: 150px;
+    left: 58em;
+    top: 4em;
+    font-size: 14px;
+    text-align: center;
+    position: relative;
+}
+.cloud3 {
+    background-image: url("../img/dymek.png");
+    -webkit-transform: scale(-1, -1);
+    transform: scale(-1, -1);
+    justify-content: center;
+    vertical-align: middle !important;
+    padding-left: 40px;
+    padding-right: 30px;
+    padding-top: 28px;
+    width: 370px;
+    height: 250px;
+    left: 64em;
+    top: 1em;
+    font-size: 14px;
+    text-align: center;
+    position: relative;
+}
+
+.pulse {
+    margin-left: 100px;
+    margin-top: -300px;
+    position: absolute;
+    font-family: Ubuntu;
+    font-size: 9px;
+    line-height: 10px;
+    text-align: center;
+    color: #2B2B2B;
+    padding: 20px;
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #F7CE08;
+    box-shadow: 0 0 0 rgba(247,206,8, 0.2);
+    animation: pulse 2s infinite;
+}
+.pulse:hover {
+    animation: none;
+}
+
+
+@keyframes pulse {
+    0% {
+        -moz-box-shadow: 0 0 0 0 rgba(247,206,8, 0.2);
+        box-shadow: 0 0 0 0 rgba(247,206,8, 0.2);
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 10px rgba(247,206,8, 0.2);
+        box-shadow: 0 0 0 10px rgba(247,206,8, 0.2);
+    }
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(247,206,8, 0.2);
+        box-shadow: 0 0 0 0 rgba(247,206,8, 0.2);
+    }
+}
+
+.number-in-circle {
+    padding-top: 15px;
+    font-size: 300%;
+    padding-bottom: 15px;
+}
 .n{
-    font-size: 24px;
+    font-size: 14px;
     padding-left: 50px;
     max-height: 30%;
+    text-align:justify
 }
 
 .bubble5 {
@@ -555,3 +646,12 @@ div#text7 img {
     height: 600px;
     margin-top: 100px;
 }
+
+
+/* Carte accueil  */
+.map_index{width: 520px; height: 420px;}
+@media only screen and (max-width : 300px){.map_index {width: 200px; height: 162px;}}
+@media only screen and (min-width: 301px) and (max-width: 500px) {.map_index{width: 380px; height: 307px;}}
+@media only screen and (min-width : 501px) and (max-width : 959px) {.map_index{width: 500px; height: 404px;}}
+@media only screen and (min-width: 961px) {.map-index{width: 800px; height: 6646px;}}
+

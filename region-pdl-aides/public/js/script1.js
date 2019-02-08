@@ -33,8 +33,8 @@ jQuery(document).ready(function ($) {
             0.1: flex mode, allow up to 10% to bleed outside, this is better way to make full window slider, especially for mobile devices
     */
 
-    var MAX_WIDTH = 3000;
-    var MAX_HEIGHT = 3000;
+    var MAX_WIDTH = 1920;
+    var MAX_HEIGHT = 1080;
     var MAX_BLEEDING = 1;
 
     function ScaleSlider() {
